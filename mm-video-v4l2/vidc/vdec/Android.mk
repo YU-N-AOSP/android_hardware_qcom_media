@@ -101,6 +101,7 @@ LOCAL_PRELINK_MODULE    := false
 LOCAL_SHARED_LIBRARIES  := liblog libutils libbinder libcutils libdl
 
 LOCAL_SHARED_LIBRARIES  += libqdMetaData
+LOCAL_CFLAGS            += -DDISABLE_INPUT_BUFFER_CACHE
 
 LOCAL_SRC_FILES         := src/frameparser.cpp
 LOCAL_SRC_FILES         += src/h264_utils.cpp
