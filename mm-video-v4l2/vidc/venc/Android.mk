@@ -1,6 +1,9 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 # ---------------------------------------------------------------------------------
 # 				Common definitons
 # ---------------------------------------------------------------------------------
@@ -73,6 +76,9 @@ libmm-venc-add-dep  := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 LOCAL_MODULE                    := libOmxVenc
 LOCAL_MODULE_TAGS               := optional
 LOCAL_CFLAGS                    := $(libmm-venc-def)
@@ -97,6 +103,9 @@ ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_NEED_SW_VENC_MPEG4)),true
 # ---------------------------------------------------------------------------------
 
 include $(CLEAR_VARS)
+
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
 
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/mm-video/swvenc
 
@@ -125,6 +134,9 @@ ifeq ($(call is-board-platform-in-list, $(TARGETS_THAT_NEED_SW_VENC_HEVC)),true)
 #                            Make the Shared library (libOmxSwVenc)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
+
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
 
 libmm-venc-inc      += $(TARGET_OUT_HEADERS)/mm-video/swVenc
 

@@ -1,6 +1,9 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 # ---------------------------------------------------------------------------------
 # 				Common definitons
 # ---------------------------------------------------------------------------------
@@ -54,6 +57,9 @@ endif
 
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 # Common Includes
 libmm-vdec-inc          := $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
@@ -91,6 +97,9 @@ endif
 
 include $(CLEAR_VARS)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 LOCAL_MODULE                    := libOmxVdec
 LOCAL_MODULE_TAGS               := optional
 LOCAL_CFLAGS                    := $(libmm-vdec-def) -Werror
@@ -119,6 +128,9 @@ include $(BUILD_SHARED_LIBRARY)
 # ---------------------------------------------------------------------------------
 
 include $(CLEAR_VARS)
+
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
 
 # libOmxVdecHevc library is not built for OSS builds as QCPATH is null in OSS builds.
 

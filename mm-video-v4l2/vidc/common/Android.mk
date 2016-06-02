@@ -3,6 +3,9 @@ ROOT_DIR := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_PATH:= $(ROOT_DIR)
 
+# Too many clang warnings/errors, see b/23163853.
+LOCAL_CLANG := false
+
 # ---------------------------------------------------------------------------------
 # 				Common definitons
 # ---------------------------------------------------------------------------------
